@@ -52,6 +52,7 @@ class Book extends Component
         $validated = $this->validate($rules, $message);
         ModelsBook::create($validated);
         session()->flash('success','Data created successfully');
+        $this->clear();
     }
     public function edit($id)
     {
